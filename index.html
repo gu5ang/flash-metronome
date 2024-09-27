@@ -22,17 +22,18 @@
     player.style.width = "" + window.innerWidth * 0.95 + "px";
     player.style.height = "" + window.innerHeight * 0.95 + "px";
     document.getElementById("container").appendChild(player);
-    player.load("movie.swf");
+    player.load("movie1.swf");
 
     // button click switch
-    let currentMovie = "movie.swf";
+    let currentMovie = "movie1.swf";
     document.getElementById("switchButton").addEventListener("click", () => {
-        let currentMovie = (currentMovie === "movie.swf" ? "movie2.swf" : "movie.swf");
+        currentMovie = (currentMovie === "movie1.swf" ? "movie2.swf" : "movie1.swf");
         player.load(currentMovie);
     });
 </script>
 </body>
 </html>
+<!-- https://github.com/ruffle-rs/ruffle/wiki/Using-Ruffle#javascript-api -->
 <!--<script>-->
 <!--    window.RufflePlayer = window.RufflePlayer || {};-->
 <!--    window.RufflePlayer.config = {-->
